@@ -1,12 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_new/login_signup.dart';
 import 'package:lottie/lottie.dart';
 
 import 'login.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Splash2(),
   ));
 }
@@ -21,7 +23,7 @@ class _Splsh2State extends State<Splash2> {
   void initState() {
     Timer(Duration(seconds: 4), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => LoginPage()));
+          context, MaterialPageRoute(builder: (context) => Login_SignUp()));
     });
     super.initState();
   }
@@ -29,9 +31,9 @@ class _Splsh2State extends State<Splash2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff360822),
+      backgroundColor: Color(0xff360823),
       body: Center(
-        child: Lottie.asset("assets/Animation/house.json", height: 300),
+        child: Lottie.asset("assets/Animation/house.json", height: 800),
         //   child: Lottie.network("https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json"),
       ),
     );
