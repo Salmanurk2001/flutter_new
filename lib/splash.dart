@@ -14,7 +14,7 @@ class Splash extends StatelessWidget{
           ///setting image decoration as screen background
           // image: DecorationImage(
           //     fit:BoxFit.cover,image: AssetImage(
-          //     "assets/Images/Saved Pictures/wallpaperflare.com_wallpaper (1).jpg")
+          //     "assets/Images/wallpaperflare.com_wallpaper.jpg")
           // )///NetworkImage(url)
           ///setting gradiant as screen background
           gradient: LinearGradient(
