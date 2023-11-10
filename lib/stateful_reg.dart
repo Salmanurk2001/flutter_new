@@ -88,7 +88,16 @@ class _Reg_StatefulState extends State<Reg_Stateful> {
                       return null;
                     }
                   },
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
+                      suffixIcon: IconButton(onPressed: (){
+                            setState(() {
+                              if(showpassword==true){
+                                showpassword=false;
+                              }else{
+                                showpassword=true;
+                              }
+                            });
+                          },icon: Icon(showpassword==true? Icons.visibility_off_sharp : Icons.visibility)),
                       hintText: "Password", border: OutlineInputBorder()),
                 ),
                 const SizedBox(

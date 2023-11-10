@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+//_import 'package:flutter_new/New_app.dart';
 import 'package:flutter_new/login_signup.dart';
 import 'package:lottie/lottie.dart';
 
@@ -15,10 +16,10 @@ void main() {
 
 class Splash2 extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _Splsh2State();
+  State<StatefulWidget> createState() => _Splash2State();
 }
 
-class _Splsh2State extends State<Splash2> {
+class _Splash2State extends State<Splash2> {
   @override
   void initState() {
     Timer(Duration(seconds: 4), () {
