@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_new/login.dart';
 import 'package:flutter_new/registration.dart';
-import 'package:flutter_new/stateful_Login.dart';
-import 'package:flutter_new/stateful_reg.dart';
+import 'package:flutter_new/Statefull/stateful_Login.dart';
+import 'package:flutter_new/Statefull/stateful_reg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Login_SignUp extends StatelessWidget {
