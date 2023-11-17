@@ -10,6 +10,7 @@ class MyWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+<<<<<<< HEAD
     // return ListTile(
     //   leading: image,
     //   title: label,
@@ -26,6 +27,13 @@ class MyWidget extends StatelessWidget{
           ElevatedButton(onPressed: onpressed, child: label)
         ],
       ),
+=======
+    return ListTile(
+      leading: image,
+      title: label,
+      tileColor: bgcolor,
+      onTap:onpressed,
+>>>>>>> origin/master
     );
   }
 }
