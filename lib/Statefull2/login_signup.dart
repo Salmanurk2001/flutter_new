@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_new/login.dart';
-import 'package:flutter_new/registration.dart';
-import 'package:flutter_new/Statefull/stateful_Login.dart';
-import 'package:flutter_new/Statefull/stateful_reg.dart';
+import 'package:flutter_new/Statefull2/Reg_page.dart';
+import 'package:flutter_new/Statefull/login.dart';
+import 'package:flutter_new/Statefull2/stateful_Login.dart';
+import 'package:flutter_new/Statefull2/Reg_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Login_SignUp extends StatelessWidget {
@@ -31,7 +31,7 @@ class Login_SignUp extends StatelessWidget {
             MaterialButton(
               shape: StadiumBorder(),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Reg_Stateful()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Reg1_Stateful()));
               },
               color: Colors.purple,
               child: const Text('Sign Up'),

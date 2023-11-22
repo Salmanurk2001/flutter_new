@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_new/Statefull/stateful_Login.dart';
+import 'package:flutter_new/Statefull2/stateful_Login.dart';
 
-class Reg_Stateful extends StatefulWidget {
-  const Reg_Stateful({super.key});
+class Reg1_Stateful extends StatefulWidget {
+  const Reg1_Stateful({super.key});
 
   @override
-  State<Reg_Stateful> createState() => _Reg_StatefulState();
+  State<Reg1_Stateful> createState() => _Reg_StatefulState();
 }
 
-class _Reg_StatefulState extends State<Reg_Stateful> {
+class _Reg_StatefulState extends State<Reg1_Stateful> {
   final formkey = GlobalKey<FormState>();
   String? pwd;
   bool showpassword = true;
@@ -90,14 +90,14 @@ class _Reg_StatefulState extends State<Reg_Stateful> {
                   },
                   decoration: InputDecoration(
                       suffixIcon: IconButton(onPressed: (){
-                            setState(() {
-                              if(showpassword==true){
-                                showpassword=false;
-                              }else{
-                                showpassword=true;
-                              }
-                            });
-                          },icon: Icon(showpassword==true? Icons.visibility_off_sharp : Icons.visibility)),
+                        setState(() {
+                          if(showpassword==true){
+                            showpassword=false;
+                          }else{
+                            showpassword=true;
+                          }
+                        });
+                      },icon: Icon(showpassword==true? Icons.visibility_off_sharp : Icons.visibility)),
                       hintText: "Password", border: OutlineInputBorder()),
                 ),
                 const SizedBox(

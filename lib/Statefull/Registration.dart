@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_new/Statefull/homepage.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+void main(){
+  runApp(MaterialApp(home: Register(),));
+}
 class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -59,7 +62,7 @@ class Register extends StatelessWidget {
           ),
           ElevatedButton(
               onPressed: () {
-                //  Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+                 // Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
               },
               child: const Text("SignUp Here!"))
         ],

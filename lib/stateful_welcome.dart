@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_new/New_app.dart';
-import '../login_signup.dart';
+import 'package:flutter_new/Statefull/Registration.dart';
+import 'Statefull2/login_signup.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter_new/home.dart';
-import 'package:flutter_new/login.dart';
+import 'package:flutter_new/Statefull/login.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,7 +26,8 @@ class _Splash2State extends State<Splash2> {
   @override
   void initState() {
     Timer(Duration(seconds: 4), (){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>New()));
+      Navigator.pushReplacement(context, MaterialPageRoute(
+          builder: (context)=>New()));
     });
     super.initState();
   }

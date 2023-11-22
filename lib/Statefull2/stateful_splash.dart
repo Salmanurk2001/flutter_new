@@ -1,12 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-//_import 'package:flutter_new/New_app.dart';
-import 'package:flutter_new/login_signup.dart';
+import 'package:flutter_new/Statefull2/login_signup.dart';
 import 'package:lottie/lottie.dart';
-
-import '../login.dart';
-
+import 'package:flutter_new/Statefull/login.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,

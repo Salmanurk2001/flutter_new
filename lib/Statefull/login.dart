@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_new/home.dart';
+import 'package:flutter_new/Statefull/homepage.dart';
+import 'package:flutter_new/Statefull/login.dart';
+import 'package:flutter_new/Statefull/Registration.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+void main(){
+  runApp(MaterialApp(home: Login_Page(),));
+}
 class Login_Page extends StatelessWidget {
   String username = "admin";
   String password = 'admin123';
@@ -72,7 +76,7 @@ class Login_Page extends StatelessWidget {
                 if (username == user_controller.text &&
                     password == pass_controller.text) {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Home()));
+                      MaterialPageRoute(builder: (context) => home()));
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
@@ -80,7 +84,6 @@ class Login_Page extends StatelessWidget {
                         backgroundColor: Colors.red,
                       ));
                 }
-
                 /// to clear text fields
                 user_controller.text = "";
                 pass_controller.text = "";
@@ -90,7 +93,10 @@ class Login_Page extends StatelessWidget {
             height: 20,
           ),
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Register()));
+              },
               child: RichText(
                   text: const TextSpan(
                       style: TextStyle(color: Colors.black, fontSize: 20),
@@ -99,7 +105,9 @@ class Login_Page extends StatelessWidget {
                         TextSpan(
                             text: 'SignUp!!!',
                             style: TextStyle(fontWeight: FontWeight.bold))
-                      ])))
+                      ])
+              )
+          )
         ],
       ),
     );
