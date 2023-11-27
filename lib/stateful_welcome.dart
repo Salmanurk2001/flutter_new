@@ -1,15 +1,13 @@
 import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_new/Statefull/Registration.dart';
+import 'package:flutter_new/Statefull2/stateful_Login.dart';
 import 'Statefull2/login_signup.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter_new/home.dart';
 import 'package:flutter_new/Statefull/login.dart';
-
 import 'package:google_fonts/google_fonts.dart';
-
 
 void main(){
   runApp(MaterialApp(
@@ -25,7 +23,7 @@ class Splash2 extends StatefulWidget{
 class _Splash2State extends State<Splash2> {
   @override
   void initState() {
-    Timer(Duration(seconds: 4), (){
+    Timer(Duration(seconds: 10), (){
       Navigator.pushReplacement(context, MaterialPageRoute(
           builder: (context)=>New()));
     });
@@ -36,7 +34,7 @@ class _Splash2State extends State<Splash2> {
     return Scaffold(
         backgroundColor: Colors.black,
         body: Center(
-            child: Lottie.asset("assets/animations/house.json"),
+            child: Lottie.asset("assets/Animation/Animation - 1700742786534.json"),
             // child: Lottie.network("https://lottie.host/43740cf7-9bd9-4636-a1be-f12b9a84f98a/BIPuG3tVwp.json")
           ),
         );
@@ -139,7 +137,7 @@ class New extends StatelessWidget {
                 onPressed: () {
                   if (custpass1_controller == custpass2_controller) {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => New()));
+                        MaterialPageRoute(builder: (context) => Login_Page()));
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
@@ -147,8 +145,6 @@ class New extends StatelessWidget {
                           backgroundColor: Colors.red,
                         ));
                   }
-
-
                   /// to clear text fields
                   // custuser_controller.text = "";
                   // custpass1_controller.text = "";
@@ -161,7 +157,7 @@ class New extends StatelessWidget {
               TextButton(
                   onPressed: () {
                     Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context)=> New()));
+                        context, MaterialPageRoute(builder: (context)=> Login_SignUp()));
                   },
                   child: RichText(
                       text: const TextSpan(
@@ -171,7 +167,10 @@ class New extends StatelessWidget {
                             TextSpan(
                                 text: '  Login!!!',
                                 style: TextStyle(fontWeight: FontWeight.bold))
-                          ])))
+                          ]
+                      )
+                  )
+              )
             ],
           ),
         )

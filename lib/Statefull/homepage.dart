@@ -23,7 +23,7 @@ class _homeState extends State<home> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Lottie.asset("assets/animations/house.json"),
+        child: Lottie.asset("assets/Animation/Animation - 1698770246228.json"),
       ),
     );
   }

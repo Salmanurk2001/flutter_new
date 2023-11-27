@@ -18,7 +18,7 @@ class Splash2 extends StatefulWidget {
 class _Splash2State extends State<Splash2> {
   @override
   void initState() {
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 6), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Login_SignUp()));
     });
@@ -28,9 +28,9 @@ class _Splash2State extends State<Splash2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff360823),
+      backgroundColor: Color(0xFF4A148C),
       body: Center(
-        child: Lottie.asset("assets/Animation/house.json", height: 800),
+        child: Lottie.asset("assets/Animation/Animation - 1700664531803.json", height: 800),
         //   child: Lottie.network("https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json"),
       ),
     );
