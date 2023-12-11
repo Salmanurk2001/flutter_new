@@ -22,6 +22,7 @@ class _Shared_LoginState extends State<Shared_Login>{
     super.initState();
   }
   void check_user_loggedin()async{
+    final SharedPreferences preferences=await SharedPreferences.getInstance()!;
     /// if first statement is null execute second Statement
     loggedin= preferences.getBool("loggedin")??false;
     if(loggedin==true){
@@ -49,7 +50,7 @@ class _Shared_LoginState extends State<Shared_Login>{
               ),
             ),
             ElevatedButton(onPressed: ()async{
-              preferences=await SharedPreferences.getInstance()!;
+              final SharedPreferences preferences=await SharedPreferences.getInstance()!;
               String username=uname_ctrl.text;
               String password=pwd_ctrl.text;
               if(username!=""&& password!=""){
