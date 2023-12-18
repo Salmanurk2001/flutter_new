@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart' as sql;
 
-class SQLHelper {
+class SQLHelper{
   //create database
   // OpenDb - user defined method to create db
   static Future<sql.Database> OpenDb() async {
