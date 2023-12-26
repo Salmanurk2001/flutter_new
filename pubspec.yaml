@@ -43,6 +43,11 @@ dependencies:
   sqflite: ^2.3.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  email_validator: ^2.1.17
+  get: ^4.6.6
+  path_provider: ^2.1.1
+  provider: ^6.1.1
+
 
 
   # The following adds the Cupertino Icons font to your application.
