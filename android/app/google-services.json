@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583406594145",
+    "project_id": "fir-operation-new",
+    "storage_bucket": "fir-operation-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583406594145:android:b3e19ed62604338c64e220",
+        "android_client_info": {
+          "package_name": "com.salman.flutter_new"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgZiMazkyC4hRlDSvQHmsj8gomomh8ov8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
