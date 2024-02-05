@@ -22,13 +22,17 @@ class DioHome extends StatelessWidget {
           controller.isInternetConncted.value
               ? buildFAB()
               : Container()),
-      body: Obx(() =>
-          SizedBox(
-              width: double.infinity,
-              height: double.infinity,
-              child: controller.isInternetConncted.value
-                  ? (controller.isloading.value ? showAnimation() : getData())
-                  : noInternet(context))),
+      body: Obx(() => SizedBox(
+        height:double.infinity,
+        width: double.infinity,
+        child: controller.isInternetConncted.value?
+        (controller.isloading.value?const Center(
+            child: CircularProgressIndicator())
+            :getData())
+            :const Center(child: Text("No Internet",
+          style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+        ),),
+      )),
     );
   }
 
@@ -55,16 +59,33 @@ class DioHome extends StatelessWidget {
       ),
     );
   }
-
-  RefreshIndicator getData()
-  return RefreshIndicator(child: ScrollablePositionedList.builder(
-  itemCount: controller.postList.length,
-  itemBuilder: (context, index) => InkWell(onTap:()=>Get.to(DetailsDio()),
-  child: Card(child: ListTile(),),)),
-
-
-  onRefresh: (onRefresh));
+  RefreshIndicator getData() {
+    return RefreshIndicator(
+        child: ScrollablePositionedList.builder(
+            itemScrollController: controller.itemController,
+            itemCount: controller.postList.length, itemBuilder:(context,index){
+          return InkWell(child: Card(
+            child: ListTile(
+              leading: CircleAvatar(
+                child: Text(controller.postList[index].id.toString()),
+              ),
+              title: Text("${controller.postList[index].title}"),
+              subtitle: Text("${controller.postList[index].body}"),
+            ),
+          ),);
+        }),
+        onRefresh: (onRefresh));
+  }
 }
-
-noInternet(BuildContext context) {}
-}
+//   RefreshIndicator getData()
+//   return RefreshIndicator(
+//   child: ScrollablePositionedList.builder(
+//   itemScrollController: controller.itemController,
+//   itemCount: controller.postList.length,itemBuilder: (context, index) {
+//     return InkWell(onTap:()=>Get.to
+//   }(DetailsDio()),
+//   child: Card(child: ListTile(),),)),
+//
+//
+//   onRefresh: (onRefresh));
+// }

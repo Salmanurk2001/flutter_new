@@ -65,8 +65,10 @@ dependencies:
   firebase_auth: ^4.16.0
   firebase_storage:
   image_picker:           # fetch image from cam or gallery
-  path:                   # fetch the system path of that particular images
+  path:           # fetch the system path of that particular images
   permission_handler:
+  top_snackbar_flutter: ^3.1.0
+
 
 
 

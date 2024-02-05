@@ -24,7 +24,8 @@ class Homepage extends StatelessWidget {
                 itemCount: productController.productList.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 4), itemBuilder: (context,index){
-              return ProductTile(productController.productList[index]); });
+              return(productController.productList[index]);
+                });
           }
         }),
       ),

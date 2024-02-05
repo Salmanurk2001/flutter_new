@@ -14,19 +14,18 @@ class PostController extends GetxController {
 
   var url = "https://jsonplaceholder.typicode.com/posts";
 
-  var itemController =
-  ItemScrollController(); //to perform scroll actions in scrollable+positioned_list
-  //for checking internet connection
+  var itemController = ItemScrollController(); //to perform scroll actions in scrollable+positioned_list
+
+  ///for checking internet connection
 
   checkIfInternetConnected() async {
     isInternetConncted.value = await InternetConnectionChecker().hasConnection;
   }
-
-//calling api and get response
+///calling api and get response
   getPost() async {
     checkIfInternetConnected();
     isloading.value = true;
-    var response = await DioService().getMethod(url);
+    var response = await DioService().getData(url);
     if (response.statusCode == 200) {
       response.data.forEach((element) {
         postList.add(PostModel.fromJson(element));
